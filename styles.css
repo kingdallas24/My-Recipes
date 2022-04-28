@@ -8,3 +8,30 @@ text-align: center;
 body {
     background-color: lightblue;
 }
+
+img {
+    width: 550px;
+    height: 450px;
+    margin-left: 30%;
+    margin-right: 30%;
+  
+}
+
+.menu {
+    margin-left: 30%;
+    margin-right: 30%;
+    display: inline-flex;
+}
+
+.chicken {
+    margin-right: 5px;
+}
+
+.pizza {
+    margin-right: 75px;
+    margin-left: 75px;
+}
+
+.tacos {
+    margin-left:20px;
+}
