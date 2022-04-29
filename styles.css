@@ -1,37 +1,27 @@
-h1 {
-    font-family: 'Nunito', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-size:xx-large;
-text-align: center;
-}
 
-body {
+
+* body {
     background-color: lightblue;
 }
 
+
+h1{
+    text-align: center;
+    color: #154360;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+}
+
+.para {
+    text-align: center;
+}
+
+h2, h3, h4 {
+    color: #154360;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 img {
-    width: 550px;
-    height: 450px;
-    margin-left: 30%;
-    margin-right: 30%;
-  
-}
-
-.menu {
-    margin-left: 30%;
-    margin-right: 30%;
-    display: inline-flex;
-}
-
-.chicken {
-    margin-right: 5px;
-}
-
-.pizza {
-    margin-right: 75px;
-    margin-left: 75px;
-}
-
-.tacos {
-    margin-left:20px;
+    height: auto;
+    width: 630px;
 }
