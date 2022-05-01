@@ -1,165 +1,172 @@
-
-
 * body {
-    background-color: lightblue;
-    display: flex;
+  background-color: lightblue;
+  display: flex;
 }
 
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 50px;
 
-h1{
+  color: #fff;
+  text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+    0 0 80px #03bcf4, 0 0 160px #03bcf4;
 
-    color: #154360;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 50px;
-   
- 
-    /* height: 100px;
+  /* height: 100px;
     width: 100px; */
 }
 
+@keyframes animate {
+  /* 0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92%
+{
 
-h2, h3, h4 {
-    color: #154360;
-    font-family: 'Courier New', Courier, monospace;
+    color:#154360;
+    text-shadow: none;
+} */
+  /* 100%
+{
+    color: #fff;
+    text-shadow: 0 0 10px #03bcf4,
+    0 0 20px #03bcf4,
+    0 0 40px #03bcf4,
+    0 0 80px #03bcf4,
+    0 0 160px #03bcf4;
+} */
+}
+
+h2,
+h3,
+h4 {
+  /* color: #154360; */
+  font-family: "Courier New", Courier, monospace;
+
+  color: #fff;
+  text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+    0 0 80px #03bcf4, 0 0 160px #03bcf4;
 }
 
 img {
-   
-    height: auto;
-    width: 630px;
-    animation:fadeIn 3s;
-  
+  height: auto;
+  width: 630px;
+  animation: fadeIn 3s;
 }
 
 @keyframes fadeIn {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-    
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-
-
-
-
-nav {
-    
-    color: #154360;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 20px;
-    
+nav a {
+  color: #fff;
+  text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+    0 0 80px #03bcf4, 0 0 160px #03bcf4;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 20px;
+  justify-items: space-evenly;
+  padding: 0px 15px;
 }
-
 
 .rightSide {
-    display:flex;
-    flex-direction:column;
-    background-color: #154360;
-    justify-content: right;
-    width: 25%;
+  display: flex;
+  flex-direction: column;
+  background-color: #154360;
+  justify-content: right;
+  width: 25%;
 }
 
 .flex {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    width: 50%;
-   
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 50%;
 }
 
 .leftSide {
-    display:flex;
-    flex-direction:column;
-    background-color: #154360;
-    justify-content: left;
-    width: 25%;
+  display: flex;
+  flex-direction: column;
+  background-color: #154360;
+  justify-content: left;
+  width: 25%;
 }
 
-.masterContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    height:max-content;
+.masterContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: max-content;
 }
-
-
-
-
 
 .main {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    width: 50%;
-
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 50%;
 }
 
 .paragraph {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    width: 50%;
-   
+  width: 50%;
 }
 
 .additional {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
 }
 
-html,body { height:100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
-    
 
-@media (max-width:1741px) {
-    h1{
-        font-size: 40px;
-    }
-    
-    }
+@media (max-width: 1741px) {
+  h1 {
+    font-size: 40px;
+  }
+}
 
+@media (max-width: 1436px) {
+  h1 {
+    font-size: 25px;
+  }
 
+  p,
+  .additional {
+    font-size: 15px;
+  }
 
+  img {
+    width: 400px;
+    height: auto;
+  }
+}
 
-@media (max-width:1436px){
-    h1 {
-         font-size: 25px;
- 
-     }
+@media (max-width: 900px) {
+  img {
+    width: 200px;
+    height: auto;
+  }
 
+  .rightSide {
+    display: none;
+  }
 
-     p, .additional{
-         font-size: 25px;;
-     }
+  .leftSide {
+    display: none;
+  }
 
-
-     img{
-         width: 400px;
-         height: auto;
-     }
- }
-
- @media(max-width:900px) {
-     img{
-         width:200px ;
-         height: auto;
-        
-     }
-
-     p{
-         padding: 0;
-     }
- }
-
-
-
+  nav {
+    justify-content: space-between 15px;
+  }
+}
