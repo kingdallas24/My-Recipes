@@ -120,3 +120,46 @@ html,body { height:100%;
     width: 100%;
 }
     
+
+@media (max-width:1741px) {
+    h1{
+        font-size: 40px;
+    }
+    
+    }
+
+
+
+
+@media (max-width:1436px){
+    h1 {
+         font-size: 25px;
+ 
+     }
+
+
+     p, .additional{
+         font-size: 25px;;
+     }
+
+
+     img{
+         width: 400px;
+         height: auto;
+     }
+ }
+
+ @media(max-width:900px) {
+     img{
+         width:200px ;
+         height: auto;
+        
+     }
+
+     p{
+         padding: 0;
+     }
+ }
+
+
+
