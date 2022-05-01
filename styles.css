@@ -2,6 +2,7 @@
 
 * body {
     background-color: lightblue;
+    display: flex;
 }
 
 
@@ -26,35 +27,76 @@ img {
    
     height: auto;
     width: 630px;
+    animation:fadeIn 3s;
+  
 }
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+
+
+
 
 nav {
     
     color: #154360;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    font-size: 20px;
     
 }
 
 
-/* * {
-    border: 2px solid red;
-    box-sizing: border-box;
-  } */
-
+.rightSide {
+    display:flex;
+    flex-direction:column;
+    background-color: #154360;
+    justify-content: right;
+    width: 25%;
+}
 
 .flex {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    margin: auto;
+    width: 50%;
+   
 }
+
+.leftSide {
+    display:flex;
+    flex-direction:column;
+    background-color: #154360;
+    justify-content: left;
+    width: 25%;
+}
+
+.masterContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    height:max-content;
+}
+
+
+
+
 
 .main {
     display: flex;
     flex-direction: column;
-    align-items:center;
+    text-align: center;
+    align-items: center;
+    width: 50%;
 
 }
 
@@ -62,8 +104,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    width: 800px;
+
+    width: 50%;
    
 }
 
@@ -71,5 +113,10 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 800px;
+    width: 50%;
 }
+
+html,body { height:100%;
+    width: 100%;
+}
+    
