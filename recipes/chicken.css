@@ -472,7 +472,7 @@ p {
 
   .header {
     width: auto;
-    height: 150px;
+    height: 175px;
     background-color: rgba(255, 255, 255, 0.8);
     border: 2px solid white;
     border-radius: 10px;
@@ -480,8 +480,8 @@ p {
     font-weight: bold;
     top: 50px;
     position: absolute;
-    top: 50px;
-    left: 0;
+    top: 60px;
+    left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -520,41 +520,29 @@ p {
     background: red;
     margin-left: 0px;
     font-size: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin-bottom: 0;
-  }
-
-  .chickenMenu,
-  .chickenMenu::before {
-    background: red;
-    font-size: 10px;
-    margin-left: 0px;
-    font-size: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 0;
   }
 
   .pizzaMenu,
   .pizzaMenu::before {
     background: red;
-    font-size: 10px;
-    font-size: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    margin-bottom: 0;
     margin-left: 0px;
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
   }
 
   .tacoMenu,
   .tacoMenu::before {
     background: red;
-    font-size: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    margin-bottom: 0;
     margin-left: 0px;
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
   }
 
   html,
