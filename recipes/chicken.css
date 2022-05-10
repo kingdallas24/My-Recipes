@@ -3,14 +3,13 @@
 }
 
 /* * {
-  border: 2px solid black;
-} */
+    border: 2px solid black;
+  } */
 
 body {
   background-color: black;
   font-family: "Poppins", sans-serif;
   color: #fff;
-
   /* text-shadow: 0 0 10px red, 0 0 20px red, 0 0 40px red, 0 0 80px red; */
 }
 
@@ -25,12 +24,18 @@ a:active {
   text-shadow: 0 0 9px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 80px yellow;
 }
 
-.me:hover {
+.chicken-img:hover {
   box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 80px yellow;
 }
 
 hr:hover {
   box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 80px yellow;
+}
+
+h2:hover,
+h3:hover,
+h4:hover {
+  text-shadow: 0 0 10px yellow, 0 0 20px yellow;
 }
 
 .master {
@@ -54,7 +59,7 @@ hr:hover {
 }
 
 h1::before {
-  content: attr(data-title);
+  content: "jalapeno Cream Cheese Wings";
   overflow: hidden;
   position: absolute;
   background: yellow;
@@ -83,7 +88,7 @@ h1:hover::before {
 }
 
 h1 {
-  padding: 10px;
+  padding: 15px;
   color: #fff;
   text-shadow: 0 0 10px red, 0 0 20px red;
   text-align: center;
@@ -98,10 +103,6 @@ h1 {
   /* border: 2px solid green; */
 }
 
-h3 {
-  color: green;
-}
-
 .center {
   display: flex;
   flex-direction: column;
@@ -114,14 +115,14 @@ h3 {
 
 .left {
   width: 20%;
-  height: 100vh;
-  background-image: url(./img/foodBackground.jpeg);
+  height: 550vh;
+  background-image: url(../img/foodBackground.jpeg);
 }
 
 .right {
   width: 20%;
-  height: 100vh;
-  background-image: url(./img/foodBackground.jpeg);
+  height: 550vh;
+  background-image: url(../img/foodBackground.jpeg);
 }
 
 .imageContainer {
@@ -152,7 +153,7 @@ img {
   width: inherit;
 }
 
-.me {
+.chicken-img {
   height: auto;
   width: 500px;
   object-fit: cover;
@@ -170,6 +171,7 @@ hr {
 }
 
 .innerFooter {
+  line-height: 150px;
   text-align: center;
   text-shadow: 0 0 10px red, 0 0 20px red;
 }
@@ -179,7 +181,7 @@ hr {
 }
 
 .chickenMenu {
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   margin: 10px;
   margin-left: auto;
@@ -251,6 +253,7 @@ hr {
   position: relative;
   background-clip: text;
   margin: 10px;
+
   z-index: 1;
 
   -webkit-background-clip: text;
@@ -354,6 +357,106 @@ hr {
   visibility: hidden;
 }
 
+.toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  margin: 10px 0px 0px 10px;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+}
+
+.burger {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  margin: 15px 0 0 10px;
+}
+
+.toggler:checked + .burger > div {
+  transform: rotate(135deg);
+}
+
+.burger > div {
+  transition: all 300ms ease;
+  height: 2px;
+  width: 100%;
+  background-color: red;
+  position: relative;
+}
+
+.burger > div::after,
+.burger > div::before {
+  content: "";
+  background-color: red;
+  position: absolute;
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  z-index: 1;
+}
+
+.burger > div::after {
+  top: 10px;
+}
+
+.toggler:checked + .burger > div::after,
+.toggler:checked + .burger > div::before {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.toggler:checked ~ .header {
+  transform: scaleY(1);
+  visibility: visible;
+}
+
+h2 {
+  text-shadow: 0 0 10px red, 0 0 20px red;
+}
+
+.paragraph {
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 0 20px 20px 20px;
+  font-size: 2rem;
+}
+
+h3 {
+  text-align: center;
+  text-shadow: 0 0 10px red, 0 0 20px red;
+}
+
+.steps {
+  padding-right: 20px;
+  font-size: 2rem;
+}
+
+.additional {
+  font-size: 2rem;
+}
+
+ol > li {
+  margin: 20px;
+  font-size: 2rem;
+}
+
+p {
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 500px) {
   .burger {
     visibility: visible;
@@ -394,11 +497,16 @@ hr {
     font-size: 32px;
   }
 
-  .me {
+  .chicken-img {
     width: 350px;
     border-radius: 10px;
   }
   .heading {
+    font-size: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 0;
     font-size: 1rem;
   }
 
@@ -458,74 +566,28 @@ hr {
     line-height: 15px;
     text-align: end;
   }
-}
 
-.toggler {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  margin: 10px 0px 0px 10px;
-  width: 40px;
-  height: 40px;
-  opacity: 0;
-}
+  .steps {
+    padding-right: 20px;
+    font-size: 1rem;
+  }
 
-.burger {
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  background-color: #fff;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px;
-  margin: 5px;
-}
+  .additional {
+    font-size: 1rem;
+  }
 
-.toggler:checked + .burger > div {
-  transform: rotate(135deg);
-}
+  ol > li {
+    margin: 20px;
+    font-size: 1rem;
+  }
 
-.burger > div {
-  transition: all 300ms ease;
-  height: 2px;
-  width: 100%;
-  background-color: red;
-  position: relative;
-}
+  .paragraph {
+    font-size: 1rem;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
 
-.burger > div::after,
-.burger > div::before {
-  content: "";
-  background-color: red;
-  position: absolute;
-  top: -10px;
-  height: 2px;
-  width: 100%;
-  z-index: 1;
-}
-
-.burger > div::after {
-  top: 10px;
-}
-
-.toggler:checked + .burger > div::after,
-.toggler:checked + .burger > div::before {
-  top: 0;
-  transform: rotate(90deg);
-}
-
-.toggler:checked ~ .header {
-  transform: scaleY(1);
-  visibility: visible;
-}
-
-.headingTwo {
-  color: green;
+  h2 {
+    margin: 10px;
+  }
 }

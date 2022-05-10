@@ -3,14 +3,13 @@
 }
 
 /* * {
-  border: 2px solid black;
-} */
+        border: 2px solid black;
+      } */
 
 body {
   background-color: black;
   font-family: "Poppins", sans-serif;
   color: #fff;
-
   /* text-shadow: 0 0 10px red, 0 0 20px red, 0 0 40px red, 0 0 80px red; */
 }
 
@@ -25,12 +24,17 @@ a:active {
   text-shadow: 0 0 9px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 80px yellow;
 }
 
-.me:hover {
+.chicken-img:hover {
   box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 80px yellow;
 }
 
 hr:hover {
   box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 80px yellow;
+}
+h2:hover,
+h3:hover,
+h4:hover {
+  text-shadow: 0 0 10px yellow, 0 0 20px yellow;
 }
 
 .master {
@@ -54,7 +58,7 @@ hr:hover {
 }
 
 h1::before {
-  content: attr(data-title);
+  content: "Birria Tacos";
   overflow: hidden;
   position: absolute;
   background: yellow;
@@ -83,7 +87,7 @@ h1:hover::before {
 }
 
 h1 {
-  padding: 10px;
+  padding: 15px;
   color: #fff;
   text-shadow: 0 0 10px red, 0 0 20px red;
   text-align: center;
@@ -98,10 +102,6 @@ h1 {
   /* border: 2px solid green; */
 }
 
-h3 {
-  color: green;
-}
-
 .center {
   display: flex;
   flex-direction: column;
@@ -114,14 +114,14 @@ h3 {
 
 .left {
   width: 20%;
-  height: 100vh;
-  background-image: url(./img/foodBackground.jpeg);
+  height: 850vh;
+  background-image: url(../img/foodBackground.jpeg);
 }
 
 .right {
   width: 20%;
-  height: 100vh;
-  background-image: url(./img/foodBackground.jpeg);
+  height: 850vh;
+  background-image: url(../img/foodBackground.jpeg);
 }
 
 .imageContainer {
@@ -152,7 +152,7 @@ img {
   width: inherit;
 }
 
-.me {
+.chicken-img {
   height: auto;
   width: 500px;
   object-fit: cover;
@@ -170,6 +170,7 @@ hr {
 }
 
 .innerFooter {
+  line-height: 150px;
   text-align: center;
   text-shadow: 0 0 10px red, 0 0 20px red;
 }
@@ -251,6 +252,7 @@ hr {
   position: relative;
   background-clip: text;
   margin: 10px;
+
   z-index: 1;
 
   -webkit-background-clip: text;
@@ -354,112 +356,6 @@ hr {
   visibility: hidden;
 }
 
-@media screen and (max-width: 500px) {
-  .burger {
-    visibility: visible;
-  }
-
-  .center {
-    width: 100vw;
-  }
-
-  hr {
-    width: 100vw;
-  }
-
-  .header {
-    width: auto;
-    height: 150px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 2px solid white;
-    border-radius: 10px;
-    color: black;
-    font-weight: bold;
-    top: 50px;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    margin-left: 0px;
-    visibility: hidden;
-    transition: all 300ms ease;
-    transform: scaleY(0);
-    transform-origin: top;
-  }
-
-  .innerFooter {
-    font-size: 32px;
-  }
-
-  .me {
-    width: 350px;
-    border-radius: 10px;
-  }
-  .heading {
-    font-size: 1rem;
-  }
-
-  .header {
-    font-size: 10px;
-
-    text-align: left;
-  }
-  .homeMenu,
-  .homeMenu::after {
-    background: red;
-    margin-left: 0px;
-    font-size: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin-bottom: 0;
-  }
-
-  .chickenMenu,
-  .chickenMenu::before {
-    background: red;
-    font-size: 10px;
-    margin-left: 0px;
-    font-size: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    margin-bottom: 0;
-  }
-
-  .pizzaMenu,
-  .pizzaMenu::before {
-    background: red;
-    font-size: 10px;
-    font-size: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    margin-bottom: 0;
-    margin-left: 0px;
-  }
-
-  .tacoMenu,
-  .tacoMenu::before {
-    background: red;
-    font-size: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    margin-bottom: 0;
-    margin-left: 0px;
-  }
-
-  html,
-  body {
-    overflow-x: hidden;
-  }
-
-  a {
-    line-height: 15px;
-    text-align: end;
-  }
-}
-
 .toggler {
   position: absolute;
   top: 0;
@@ -485,7 +381,7 @@ hr {
   justify-content: center;
   align-items: center;
   padding: 4px;
-  margin: 5px;
+  margin: 15px 0 0 10px;
 }
 
 .toggler:checked + .burger > div {
@@ -526,6 +422,182 @@ hr {
   visibility: visible;
 }
 
-.headingTwo {
-  color: green;
+h2 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-shadow: 0 0 10px red, 0 0 20px red;
+}
+
+.paragraph {
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 0 20px 20px 20px;
+  font-size: 2rem;
+}
+
+h3 {
+  text-align: center;
+  text-shadow: 0 0 10px red, 0 0 20px red;
+}
+
+h4 {
+  text-shadow: 0 0 10px red, 0 0 20px red;
+  text-align: center;
+}
+
+.steps {
+  padding-right: 20px;
+  font-size: 1.5rem;
+}
+
+ol > li {
+  margin: 20px;
+  font-size: 2rem;
+}
+
+p {
+  margin-top: 10px;
+}
+
+ul {
+  font-size: 2rem;
+  display: table;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 500px) {
+  .burger {
+    visibility: visible;
+  }
+
+  .center {
+    width: 100vw;
+  }
+
+  hr {
+    width: 100vw;
+  }
+
+  .header {
+    width: auto;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+
+    top: 50px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-left: 0px;
+    visibility: hidden;
+    transition: all 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  .innerFooter {
+    font-size: 32px;
+  }
+
+  .chicken-img {
+    width: 350px;
+    border-radius: 10px;
+  }
+  .heading {
+    font-size: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+
+  .header {
+    font-size: 10px;
+
+    text-align: left;
+  }
+  .homeMenu,
+  .homeMenu::after {
+    background: red;
+    margin-left: 0px;
+    font-size: 24px;
+    padding-top: 0px;
+
+    margin-bottom: 0;
+  }
+
+  .chickenMenu,
+  .chickenMenu::before {
+    background: red;
+    font-size: 10px;
+    margin-left: 0px;
+    font-size: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 0;
+  }
+
+  .pizzaMenu,
+  .pizzaMenu::before {
+    background: red;
+    font-size: 10px;
+    font-size: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 0;
+    margin-left: 0px;
+  }
+
+  .tacoMenu,
+  .tacoMenu::before {
+    background: red;
+    font-size: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 0;
+    margin-left: 0px;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .steps {
+    padding-right: 20px;
+    font-size: 1rem;
+  }
+
+  .additional {
+    padding-right: 20px;
+    font-size: 1rem;
+  }
+
+  ol > li {
+    margin: 20px;
+    font-size: 1rem;
+  }
+
+  ul > li {
+    margin: 20px;
+    font-size: 1rem;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  h2 {
+    margin: 10px;
+  }
 }
