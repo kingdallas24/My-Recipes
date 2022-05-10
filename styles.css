@@ -390,6 +390,10 @@ hr {
     transform-origin: top;
   }
 
+  h1:hover::before {
+    padding: 2px;
+  }
+
   .innerFooter {
     font-size: 32px;
   }
@@ -496,6 +500,9 @@ hr {
   width: 100%;
   background-color: red;
   position: relative;
+}
+.toggler:checked:hover + .burger > div {
+  transform: rotate(225deg);
 }
 
 .burger > div::after,
