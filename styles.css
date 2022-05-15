@@ -7,11 +7,67 @@
 } */
 
 body {
-  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  flex-direction: column;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./img/jezael-melgoza-2FiXtdnVhjQ-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   font-family: "Poppins", sans-serif;
   color: #fff;
+}
 
-  /* text-shadow: 0 0 10px red, 0 0 20px red, 0 0 40px red, 0 0 80px red; */
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgb(23, 7, 95);
+  text-shadow: 0 0 10px purple, 0 0 20px purple;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 0 10px rgb(43, 72, 168), 0 0 20px purple, 0 0 40px pink;
+  font-family: "Poppins", sans-serif;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.header > div:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+a:hover {
+  color: pink;
+  text-shadow: 0 0 10px purple, 0 0 20px purple;
+}
+
+.header > div {
+  text-align: center;
+  line-height: 50px;
+  height: 100%;
+  width: 100%;
+}
+
+.transparent {
+  width: 1000px;
+  padding: 50px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
 }
 
 a,
@@ -21,43 +77,37 @@ a:active {
   text-decoration: none;
 }
 
-.footer:hover {
-  text-shadow: 0 0 9px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 80px yellow;
-}
-
 .me:hover {
-  box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 80px yellow;
+  box-shadow: 0 0 10px purple, 0 0 20px purple, 0 0 40px pink, 0 0 80px purple;
 }
 
-hr:hover {
-  box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 80px yellow;
-}
+footer {
+  position: absolute;
+  bottom: 0;
 
-.master {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
-  height: 100vh;
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
+
+  background-color: rgb(23, 7, 95);
+  text-shadow: 0 0 10px purple, 0 0 20px purple;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 10px rgb(43, 72, 168), 0 0 20px purple, 0 0 40px pink;
+  font-family: "Poppins", sans-serif;
 }
 
-.header {
-  font-size: 24px;
-  display: flex;
-  width: 100%;
-  height: 200px;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  margin-bottom: 30px;
-  padding-top: 0px;
-  flex: 1;
+footer:hover {
+  color: pink;
+  text-shadow: 0 0 10px purple, 0 0 20px purple;
 }
 
 h1::before {
   content: attr(data-title);
   overflow: hidden;
   position: absolute;
-  background: yellow;
+  background: linear-gradient(purple, red);
   background-clip: text;
   -webkit-background-clip: text;
 
@@ -72,24 +122,20 @@ h1::before {
 
 h1:hover::before {
   width: 100%;
-  background: red;
-  padding: 20px;
-  padding-bottom: 10px;
-  line-height: 50px;
+  background-color: pink;
+
   border-radius: 15px;
-  text-shadow: 0 0 10px yellow, 0 0 20px yellow;
-  border: 2px solid yellow;
-  box-shadow: 0 0 10px yellow, 0 0 20px yellow;
+  text-shadow: 0 0 10px purple, 0 0 20px purple;
 }
 
 h1 {
-  padding: 10px;
-  color: #fff;
-  text-shadow: 0 0 10px red, 0 0 20px red;
+  padding: 0;
+  color: white;
+  text-shadow: 0 0 10px rgb(43, 72, 168), 0 0 20px purple, 0 0 40px pink;
   text-align: center;
   border: 2px transparent;
   border-bottom: none;
-  margin-top: 20px;
+  margin-top: 0px;
 
   position: relative;
   font-size: 3em;
@@ -98,91 +144,18 @@ h1 {
   /* border: 2px solid green; */
 }
 
-h3 {
-  color: green;
-}
-
-.center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 60%;
-  height: 100vh;
-  background-color: black;
-  flex: 1;
-}
-
-.left {
-  width: 20%;
-  height: 100vh;
-  background-image: url(./img/foodBackground.jpeg);
-}
-
-.right {
-  width: 20%;
-  height: 100vh;
-  background-image: url(./img/foodBackground.jpeg);
-}
-
-.imageContainer {
-  height: auto;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 img {
   border-radius: 10px;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 300px;
-  width: 800px;
-  align-items: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 4rem;
-  border-bottom: 2px;
-
-  height: inherit;
-  width: inherit;
 }
 
 .me {
   height: auto;
   width: 500px;
-  object-fit: cover;
-  display: block;
-}
-
-html,
-body {
-  margin: 0;
-}
-
-hr {
-  width: 60vw;
-  box-shadow: 0 0 10px red, 0 0 20px red, 0 0 40px red, 0 0 80px red;
-}
-
-.innerFooter {
-  text-align: center;
-  text-shadow: 0 0 10px red, 0 0 20px red;
-}
-
-.innerFooter:hover {
-  text-shadow: 0 0 10px yellow, 0 0 20px yellow;
 }
 
 .chickenMenu {
-  padding: 20px;
   border-radius: 10px;
-  margin: 10px;
-  margin-left: auto;
+
   position: relative;
   border: var(--border-size);
 
@@ -192,7 +165,7 @@ hr {
 
 .chickenMenu::before {
   content: "";
-  padding: 10px;
+
   position: absolute;
   top: 0;
   bottom: 0;
@@ -200,207 +173,120 @@ hr {
   right: 0;
   border-radius: 10px;
 
-  border: var(--border-size) solid gold;
   z-index: -1;
-}
-
-.chickenMenu:hover::before {
-  color: yellow;
-  text-shadow: 0 0 10px yellow, 0 0 20px yellow;
-
-  /* box-shadow: 0 0 10px yellow, 0 0 20px; */
-  top: calc(var(--border-size) * -3);
-  bottom: calc(var(--border-size) * -3);
-  left: calc(var(--border-size) * -3);
-  right: calc(var(--border-size) * -3);
-}
-
-.chickenMenu:hover {
-  color: yellow;
-  text-shadow: 0 0 10px red, 0 0 20px red;
-}
-
-.pizzaMenu {
-  padding: 20px;
-  border-radius: 10px;
-  margin: 10px;
-  position: relative;
-  border: var(--border-size);
-
-  --border-size: 4px;
-  z-index: 1;
-}
-
-.tacoMenu {
-  padding: 20px;
-  border-radius: 10px;
-  margin: 10px;
-  position: relative;
-  border: var(--border-size);
-
-  --border-size: 4px;
-  z-index: 1;
-}
-
-.homeMenu {
-  overflow: hidden;
-  padding: 20px;
-  border: 4px solid gold;
-  border-radius: 10px;
-  font-size: 24px;
-  position: relative;
-  background-clip: text;
-  margin: 10px;
-  z-index: 1;
-
-  -webkit-background-clip: text;
-}
-
-.homeMenu::after {
-  padding: 20px;
-  border-radius: 15px;
-  content: "Home";
-  overflow: hidden;
-  position: absolute;
-  background: yellow;
-  background-clip: text;
-  -webkit-background-clip: text;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transform-origin: left;
-  transition: all 400ms ease-in-out;
-  width: 0;
-}
-.homeMenu:hover::after {
-  width: 100%;
-  background: red;
-  text-shadow: 0 0 10px yellow, 0 0 20px yellow;
-  border: yellow;
-  box-shadow: 0 0 10px yellow, 0 0 20px yellow;
-  z-index: -1;
-}
-
-.header div {
-  box-shadow: 0 0 10px red, 0 0 20px red, 0 0 40px red, 0 0 80px red;
-}
-
-.header div:hover {
-  box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 80px yellow;
-}
-
-.pizzaMenu::before {
-  content: "";
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 10px;
-
-  border: var(--border-size) solid gold;
-  z-index: -1;
-}
-
-.pizzaMenu:hover::before {
-  color: yellow;
-  text-shadow: 0 0 10px yellow, 0 0 20px yellow;
-
-  /* box-shadow: 0 0 10px yellow, 0 0 20px; */
-  top: calc(var(--border-size) * -3);
-  bottom: calc(var(--border-size) * -3);
-  left: calc(var(--border-size) * -3);
-  right: calc(var(--border-size) * -3);
-}
-
-.pizzaMenu:hover {
-  color: yellow;
-  text-shadow: 0 0 10px red, 0 0 20px red;
-}
-
-.tacoMenu::before {
-  content: "";
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 10px;
-
-  border: var(--border-size) solid gold;
-  z-index: -1;
-}
-
-.tacoMenu:hover::before {
-  color: yellow;
-  text-shadow: 0 0 10px yellow, 0 0 20px yellow;
-
-  /* box-shadow: 0 0 10px yellow, 0 0 20px; */
-  top: calc(var(--border-size) * -3);
-  bottom: calc(var(--border-size) * -3);
-  left: calc(var(--border-size) * -3);
-  right: calc(var(--border-size) * -3);
-}
-
-.tacoMenu:hover {
-  color: yellow;
-  text-shadow: 0 0 10px red, 0 0 20px red;
 }
 
 .burger {
   visibility: hidden;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1564px) {
+  .header {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1102px) {
+  .transparent {
+    width: 500px;
+  }
+
+  .me {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1044px) {
+  .header {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 831px) {
+  .header {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 730px) {
   .burger {
     visibility: visible;
-  }
-
-  .center {
-    width: 100vw;
-  }
-
-  hr {
-    width: 100vw;
   }
 
   .header {
     width: auto;
     height: 220px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 2px solid white;
-    border-radius: 10px;
-    color: black;
-    font-weight: bold;
-    top: 50px;
+    background-color: rgb(23, 7, 95);
+    text-shadow: 0 0 10px purple, 0 0 20px purple;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 0 10px rgb(43, 72, 168), 0 0 20px purple, 0 0 40px pink;
+    font-family: "Poppins", sans-serif;
+
     position: absolute;
-    top: 50px;
+
     left: 0;
+    top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
-    margin-left: 0px;
+
+    visibility: hidden;
+    transition: all 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    font-size: 10px;
+
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 563px) {
+  .burger {
+    visibility: visible;
+  }
+
+  .header {
+    width: auto;
+    height: 220px;
+    background-color: rgb(23, 7, 95);
+    text-shadow: 0 0 10px purple, 0 0 20px purple;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 0 10px rgb(43, 72, 168), 0 0 20px purple, 0 0 40px pink;
+    font-family: "Poppins", sans-serif;
+
+    position: absolute;
+
+    left: 0;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
     visibility: hidden;
     transition: all 300ms ease;
     transform: scaleY(0);
     transform-origin: top;
   }
 
-  h1:hover::before {
-    padding: 2px;
-  }
-
-  .innerFooter {
-    font-size: 32px;
+  .transparent {
+    height: 50vh;
   }
 
   .me {
-    width: 350px;
-    border-radius: 10px;
+    width: 300px;
+    display: block;
+  }
+
+  .heading {
+    flex-shrink: 0;
+  }
+
+  footer {
+    flex: 1;
   }
   .heading {
     font-size: 1rem;
@@ -411,49 +297,37 @@ hr {
 
     text-align: left;
   }
+
   .homeMenu,
   .homeMenu::after {
-    background: red;
-    margin-left: 0px;
+    background-color: rgb(23, 7, 95);
+
     font-size: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 0;
   }
 
   .chickenMenu,
   .chickenMenu::before {
-    background: red;
-    margin-left: 0px;
+    background-color: rgb(23, 7, 95);
+
     font-size: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 0;
   }
 
   .pizzaMenu,
   .pizzaMenu::before {
-    background: red;
+    background-color: rgb(23, 7, 95);
     margin-left: 0px;
     font-size: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
     margin-bottom: 0;
   }
 
   .tacoMenu,
   .tacoMenu::before {
-    background: red;
+    background-color: rgb(23, 7, 95);
     margin-left: 0px;
     font-size: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 0;
-  }
 
-  html,
-  body {
-    overflow-x: hidden;
+    margin-bottom: 0;
   }
 
   a {
@@ -467,7 +341,7 @@ hr {
   top: 0;
   left: 0;
   z-index: 2;
-  margin: 10px 0px 0px 10px;
+  margin: 10px 0px 0px ∂0px;
   width: 40px;
   height: 40px;
   opacity: 0;
@@ -498,7 +372,7 @@ hr {
   transition: all 300ms ease;
   height: 2px;
   width: 100%;
-  background-color: red;
+  background-color: rgb(23, 7, 95);
   position: relative;
 }
 .toggler:checked:hover + .burger > div {
@@ -508,7 +382,7 @@ hr {
 .burger > div::after,
 .burger > div::before {
   content: "";
-  background-color: red;
+  background-color: rgb(23, 7, 95);
   position: absolute;
   top: -10px;
   height: 2px;
@@ -531,6 +405,25 @@ hr {
   visibility: visible;
 }
 
-.headingTwo {
-  color: green;
+a {
+  text-align: center;
+}
+
+@media screen and (max-width: 492) {
+  .transparent {
+    display: block;
+    padding: 0;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
+  .image {
+    display: block;
+  }
+
+  footer {
+    display: block;
+  }
 }
